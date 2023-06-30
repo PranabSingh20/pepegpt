@@ -1,38 +1,192 @@
-.App {
+
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Lato&family=Libre+Baskerville&family=Merriweather:wght@700&family=Work+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+html {
+  color: rgb(0, 0, 0);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  background: rgb(208, 208, 208);
+}
+
+.container {
+  padding: 30px;
+}
+
+h2 {
+  color: rgb(43 45 56);
+  text-align: center;
+  font-size: 48px;
+  letter-spacing: -0.2px;
+  font-family: "Merriweather", serif;
+}
+
+p {
+  max-width: 200rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-content {
+  max-width: 80rem;
+  width: 100%;
+  min-height: 270px;
+  height: auto;
+  padding: 18px 18px 120px 18px;
+  resize: none;
+  box-shadow: 0 12px 48px 0px rgb(109 117 141 / 100%);
+  background: rgb(255 255 255);
+  border: 0.5px solid rgb(231 233 245);
+  border-radius: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.main-content:focus {
+  border: 0.3px solid rgb(43, 45, 56, 0.3);
+  outline: none;
+}
+
+p,
+.main-content {
+  font-size: 18px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  line-height: 1.6;
+}
+
+.main-content{
+  margin: 80px;
+}
+
+.btn-style{
+  display: flex;
+}
+
+.main-container{
+  margin-top: 100px;
+  display: flex;
+  width: 1400px;
+}
+
+
+button {
+  /* position: absolute; */
+  background: #0a0a23;
+  color: rgb(255 255 255);
+  border-radius: 20px;
+  padding: 16px 32px;
+  border: none;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin: auto;
+  display: flex;
+  position: relative;
+  margin-top: -50px;
+  cursor: pointer;
+}
+
+.pfp{
+  margin-top: -180px;
+  margin-left: 175px;
+}
+
+
+
+button:focus,
+button:hover {
+  background: #2b2b89;
+  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1);
+}
+
+.counter-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin-top: 20px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 16px;
+    word-spacing: normal;
+    margin-bottom: 40px;
+    margin-top: 15px;
+  }
+
+  .main-content {
+    /*border:1px solid*/
+    font-size: 16px;
+    word-spacing: normal;
+  }
+
+  button {
+    padding: 12px 28px;
+    font-size: 16px;
+    margin-top: -70px;
+  }
+
+  .counter-container {
+    flex-direction: column;
+  }
+
+  .counter-container p:first-child {
+    margin-bottom: 0;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: lightgray;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.circle.glow {
+  box-shadow: 0 0 10px 5px rgba(0, 0, 255, 0.7);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.circle-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.circle-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0; /* Remove the default margin */
+}
+
+.caption {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.chattext{
+  margin-top: 20px;
+  margin-left: 10px;
 }
